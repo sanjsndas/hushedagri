@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Monument & Grain</title>
+  <meta name="description" content="About Monument & Grain: an independent editorial publication about architecture, interior design, materials, and the craft of enduring space." />
+  <meta name="author" content="Monument & Grain" />
+  <link rel="canonical" href="https://monumentandgrain.com/about.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="About — Monument & Grain" />
+  <meta property="og:description" content="An independent editorial publication about architecture, interior design, materials, and the principles that shape spaces worth living in." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://monumentandgrain.com/about.html" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&h=630&fit=crop" />
+  <meta property="og:site_name" content="Monument & Grain" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About — Monument & Grain",
+    "description": "About Monument & Grain, an editorial publication about interior design, residential architecture, materials, and enduring principles.",
+    "url": "https://monumentandgrain.com/about.html",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Monument & Grain"
+    }
+  }
+  </script>
+
+  <style>
+    /* ===== RESET & BASE ===== */
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --canvas: #f3f3f2;
+      --paper: #ffffff;
+      --linen: #e7e6e4;
+      --ash: #d1d1d2;
+      --ink: #1a1a1e;
+      --stone: #5e5e62;
+      --muted: #8b8b90;
+      --terra: #a05a2c;
+      --serif: 'Georgia', 'Times New Roman', 'Instrument Serif', serif;
+      --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Instrument Sans', 'Helvetica Neue', sans-serif;
+      --content-width: 1240px;
+      --sidebar-width: 320px;
+      --gutter: 2rem;
+    }
+
+    html {
+      font-size: 100%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--sans);
+      background-color: var(--canvas);
+      color: var(--ink);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      padding: 0;
+      margin: 0;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button, input, select, textarea {
+      font-family: inherit;
+      font-size: inherit;
+      border: none;
+      background: none;
+      outline: none;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    ul, ol {
+      list-style: none;
+    }
+
+    /* ===== TYPOGRAPHY ===== */
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--serif);
+      font-weight: 400;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+    }
+
+    h1 { font-size: 2.6rem; }
+    h2 { font-size: 2rem; }
+    h3 { font-size: 1.5rem; }
+    h4 { font-size: 1.2rem; }
+
+    .label {
+      font-family: var(--sans);
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--stone);
+    }
+
+    .meta {
+      font-size: 0.78rem;
+      color: var(--muted);
+      letter-spacing: 0.02em;
+    }
+
+    /* ===== LAYOUT ===== */
+    .container {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 0 var(--gutter);
+    }
+
+    .layout-grid {
+      display: grid;
+      grid-template-columns: 1fr var(--sidebar-width);
+      gap: 3.5rem;
+      align-items: start;
+    }
+
+    @media (max-width: 980px) {
+      .layout-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+    }
+
+    /* ===== HEADER ===== */
+    .site-header {
+      background-color: var(--paper);
+      border-bottom: 1px solid var(--ash);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+      gap: 2rem;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+      flex-shrink: 0;
+    }
+
+    .brand-mark {
+      font-family: var(--serif);
+      font-size: 1.45rem;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+    }
+
+    .brand-tagline {
+      font-family: var(--sans);
+      font-size: 0.6rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--stone);
+      margin-top: 2px;
+    }
+
+    .main-nav {
+      display: flex;
+      gap: 1.8rem;
+      align-items: center;
+    }
+
+    .main-nav a {
+      font-size: 0.85rem;
+      letter-spacing: 0.02em;
+      color: var(--stone);
+      transition: color 0.2s;
+      white-space: nowrap;
+    }
+
+    .main-nav a:hover {
+      color: var(--ink);
+    }
+
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      padding: 8px;
+    }
+
+    .nav-toggle span {
+      display: block;
+      width: 22px;
+      height: 1.5px;
+      background: var(--ink);
+    }
+
+    @media (max-width: 860px) {
+      .main-nav {
+        display: none;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        right: 0;
+        background: var(--paper);
+        flex-direction: column;
+        padding: 1.5rem var(--gutter);
+        border-bottom: 1px solid var(--ash);
+        gap: 1.2rem;
+        align-items: flex-start;
+      }
+      .main-nav.open {
+        display: flex;
+      }
+      .nav-toggle {
+        display: flex;
+      }
+      .header-inner {
+        position: relative;
+      }
+    }
+
+    /* ===== SEARCH BAR ===== */
+    .search-bar {
+      display: flex;
+      align-items: center;
+      border: 1px solid var(--ash);
+      background: var(--paper);
+      padding: 0.4rem 0.8rem;
+      gap: 0.5rem;
+      width: 240px;
+    }
+
+    .search-bar input {
+      border: none;
+      background: transparent;
+      font-size: 0.82rem;
+      color: var(--ink);
+      width: 100%;
+      padding: 0.3rem 0;
+    }
+
+    .search-bar input::placeholder {
+      color: var(--muted);
+      font-size: 0.78rem;
+    }
+
+    .search-bar svg {
+      width: 16px;
+      height: 16px;
+      stroke: var(--stone);
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 860px) {
+      .search-bar {
+        width: 100%;
+      }
+    }
+
+    /* ===== MAIN CONTENT ===== */
+    .site-main {
+      padding: 2.5rem 0 4rem;
+    }
+
+    /* ===== ABOUT PAGE SPECIFIC ===== */
+    .about-hero {
+      margin-bottom: 3rem;
+      border-bottom: 1px solid var(--ash);
+      padding-bottom: 2rem;
+    }
+
+    .about-hero h1 {
+      font-size: 2.8rem;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+    }
+
+    .about-hero .subhead {
+      font-size: 1.1rem;
+      color: var(--stone);
+      line-height: 1.6;
+      max-width: 720px;
+      font-family: var(--serif);
+      font-style: italic;
+    }
+
+    .about-section {
+      margin-bottom: 3rem;
+    }
+
+    .about-section h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--linen);
+    }
+
+    .about-section p {
+      font-size: 0.95rem;
+      color: var(--stone);
+      line-height: 1.75;
+      margin-bottom: 1.2rem;
+    }
+
+    .about-section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .about-section ul {
+      margin: 0.5rem 0 1.2rem 1.5rem;
+      list-style: disc;
+    }
+
+    .about-section ul li {
+      font-size: 0.92rem;
+      color: var(--stone);
+      line-height: 1.7;
+      margin-bottom: 0.4rem;
+    }
+
+    .about-section blockquote {
+      border-left: 2px solid var(--terra);
+      padding-left: 1.5rem;
+      margin: 1.8rem 0;
+      font-style: italic;
+      color: var(--stone);
+      font-size: 1rem;
+      font-family: var(--serif);
+    }
+
+    .about-section blockquote cite {
+      display: block;
+      margin-top: 0.5rem;
+      font-style: normal;
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    /* Team Grid */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1.8rem;
+      margin-top: 1.5rem;
+    }
+
+    .team-card {
+      background: var(--paper);
+      border: 1px solid var(--ash);
+      padding: 1.4rem 1.2rem;
+    }
+
+    .team-card .name {
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .team-card .role {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--terra);
+      font-weight: 500;
+      margin-bottom: 0.6rem;
+    }
+
+    .team-card .bio {
+      font-size: 0.82rem;
+      color: var(--stone);
+      line-height: 1.55;
+    }
+
+    /* Values list */
+    .values-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      .values-list {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .value-item {
+      background: var(--paper);
+      border: 1px solid var(--ash);
+      padding: 1.4rem 1.2rem;
+    }
+
+    .value-item h4 {
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .value-item p {
+      font-size: 0.85rem;
+      color: var(--stone);
+      line-height: 1.6;
+      margin-bottom: 0;
+    }
+
+    /* ===== SIDEBAR ===== */
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+
+    .sidebar-section {
+      background: var(--paper);
+      border: 1px solid var(--ash);
+      padding: 1.5rem 1.4rem;
+    }
+
+    .sidebar-section h4 {
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 1px solid var(--linen);
+    }
+
+    .sidebar-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+    }
+
+    .sidebar-list li {
+      font-size: 0.85rem;
+      line-height: 1.4;
+      color: var(--ink);
+    }
+
+    .sidebar-list li a:hover {
+      color: var(--terra);
+    }
+
+    .sidebar-list .meta {
+      display: block;
+      margin-top: 0.2rem;
+      font-size: 0.7rem;
+      color: var(--muted);
+    }
+
+    .author-box {
+      background: var(--paper);
+      border: 1px solid var(--ash);
+      padding: 1.5rem 1.4rem;
+    }
+
+    .author-box .author-name {
+      font-family: var(--serif);
+      font-size: 1rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .author-box .author-bio {
+      font-size: 0.8rem;
+      color: var(--stone);
+      line-height: 1.55;
+      margin-top: 0.6rem;
+    }
+
+    /* ===== FAQ ===== */
+    .faq-section {
+      margin: 3rem 0;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--ash);
+      padding: 1.2rem 0;
+    }
+
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      gap: 1rem;
+    }
+
+    .faq-question h4 {
+      font-family: var(--sans);
+      font-size: 0.95rem;
+      font-weight: 500;
+      letter-spacing: -0.005em;
+    }
+
+    .faq-question span {
+      font-size: 1.1rem;
+      color: var(--stone);
+      transition: transform 0.2s;
+      flex-shrink: 0;
+    }
+
+    .faq-question.open span {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.35s ease;
+      padding: 0;
+    }
+
+    .faq-answer.open {
+      max-height: 300px;
+      padding-top: 0.8rem;
+    }
+
+    .faq-answer p {
+      font-size: 0.85rem;
+      color: var(--stone);
+      line-height: 1.6;
+    }
+
+    /* ===== FOOTER ===== */
+    .site-footer {
+      background: var(--paper);
+      border-top: 1px solid var(--ash);
+      padding: 3rem 0 2rem;
+      margin-top: 3rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 2.5rem;
+    }
+
+    .footer-brand .brand-mark {
+      font-size: 1.2rem;
+    }
+
+    .footer-brand p {
+      font-size: 0.8rem;
+      color: var(--stone);
+      line-height: 1.55;
+      margin-top: 0.8rem;
+      max-width: 320px;
+    }
+
+    .footer-col h5 {
+      font-family: var(--sans);
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--stone);
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .footer-col ul {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .footer-col ul li a {
+      font-size: 0.82rem;
+      color: var(--ink);
+      transition: color 0.2s;
+    }
+
+    .footer-col ul li a:hover {
+      color: var(--terra);
+    }
+
+    .footer-bottom {
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--linen);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.72rem;
+      color: var(--muted);
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-bottom a {
+      color: var(--muted);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .footer-bottom a:hover {
+      color: var(--ink);
+    }
+
+    @media (max-width: 800px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ===== MODAL ===== */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(26, 26, 30, 0.5);
+      z-index: 200;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .modal-overlay.open {
+      display: flex;
+    }
+
+    .modal-content {
+      background: var(--paper);
+      max-width: 620px;
+      width: 100%;
+      max-height: 80vh;
+      overflow-y: auto;
+      padding: 2.5rem;
+      border: 1px solid var(--ash);
+    }
+
+    .modal-content h2 {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+
+    .modal-content p {
+      font-size: 0.85rem;
+      color: var(--stone);
+      line-height: 1.6;
+      margin-bottom: 0.8rem;
+    }
+
+    .modal-content .close-modal {
+      float: right;
+      font-size: 1.2rem;
+      color: var(--stone);
+      padding: 0 0.4rem;
+    }
+
+    .modal-content .close-modal:hover {
+      color: var(--ink);
+    }
+
+    /* ===== UTILITY ===== */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 600px) {
+      h1 { font-size: 1.8rem; }
+      .about-hero h1 { font-size: 2rem; }
+      h2 { font-size: 1.4rem; }
+      .container { padding: 0 1.2rem; }
+      .site-main { padding: 1.8rem 0 3rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <div class="brand">
+        <a href="index.html" class="brand-mark" aria-label="Monument & Grain — Home">Monument & Grain</a>
+        <span class="brand-tagline">Architecture · Interiors · Materials</span>
+      </div>
+
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="main-nav" id="mainNav" role="navigation" aria-label="Primary">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="terms.html">Terms Of Privacy</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="cookies.html">Cookies Policy</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+          <li><a href="categories.html">Categories</a></li>
+      </nav>
+
+      <div class="search-bar" role="search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+        </svg>
+        <input type="search" id="searchInput" placeholder="Search articles…" aria-label="Search articles" />
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== MAIN ===== -->
+  <main class="site-main" role="main">
+    <div class="container">
+      <div class="layout-grid">
+
+        <!-- ===== PRIMARY CONTENT ===== -->
+        <div class="primary-column" id="primaryContent">
+
+          <!-- About Hero -->
+          <section class="about-hero">
+            <h1>About Monument & Grain</h1>
+            <p class="subhead">
+              An independent editorial publication about architecture, interior design, materials, and the quiet craft of space.
+            </p>
+          </section>
+
+          <!-- Our Mission -->
+          <section class="about-section">
+            <h2>Our Mission</h2>
+            <p>
+              Monument & Grain exists to publish considered, long-form writing about the built environment—writing that treats architecture and interior design not as lifestyle trends but as disciplines worthy of serious attention. We are interested in the principles that make spaces endure: proportion, material honesty, light, restraint, and the relationship between human beings and the rooms they inhabit.
+            </p>
+            <p>
+              In a media landscape saturated with listicles, product roundups, and shallow trend reporting, we aim to offer something different: depth over speed, principles over fashions, clarity over cleverness. We believe that good writing about space is as important as good building, and that both require patience, precision, and a willingness to think slowly.
+            </p>
+            <blockquote>
+              "Architecture is the thoughtful making of space."
+              <cite>— Louis Kahn</cite>
+            </blockquote>
+            <p>
+              Our readers include practicing architects, interior designers, materials specialists, students, and discerning homeowners who care about how buildings are made and how they feel to live in. We write for people who read—carefully, slowly, and with attention.
+            </p>
+          </section>
+
+          <!-- What We Cover -->
+          <section class="about-section">
+            <h2>What We Cover</h2>
+            <p>
+              Our editorial scope spans the full range of the built environment, from the scale of the city block to the detail of a door handle. Core subjects include:
+            </p>
+            <ul>
+              <li><strong>Residential architecture</strong> — houses, apartments, and the design of domestic space</li>
+              <li><strong>Interior design</strong> — layouts, finishes, furniture, and the craft of rooms</li>
+              <li><strong>Materials</strong> — stone, timber, plaster, metal, and the ethics of honest construction</li>
+              <li><strong>Lighting</strong> — natural and artificial, and the shaping of atmosphere</li>
+              <li><strong>Small spaces</strong> — compact living, storage, and spatial generosity</li>
+              <li><strong>Space planning</strong> — floor plans, circulation, and the arguments encoded in layout</li>
+              <li><strong>Furniture and objects</strong> — the things we live with and how they are made</li>
+            </ul>
+            <p>
+              We publish practical guides, critical essays, case studies, and interviews. Every article is written by someone with direct experience in the field—architects, designers, makers, and writers who have spent time with the materials and spaces they describe.
+            </p>
+          </section>
+
+          <!-- Editorial Principles -->
+          <section class="about-section">
+            <h2>Editorial Principles</h2>
+            <p>
+              We hold ourselves to a small number of firm commitments. These principles guide everything we publish.
+            </p>
+            <div class="values-list">
+              <div class="value-item">
+                <h4>Depth over speed</h4>
+                <p>We would rather publish one carefully considered article a week than five rushed ones a day. Our pieces take time to research, report, and edit.</p>
+              </div>
+              <div class="value-item">
+                <h4>Principles over trends</h4>
+                <p>We are less interested in what is fashionable this season than in what has proven true over decades—and what is likely to remain true.</p>
+              </div>
+              <div class="value-item">
+                <h4>Clarity over cleverness</h4>
+                <p>Good design writing should illuminate, not obscure. We aim for plain language, precise description, and arguments that hold up to scrutiny.</p>
+              </div>
+              <div class="value-item">
+                <h4>Independence</h4>
+                <p>We are reader-supported and editorially independent. We do not publish sponsored content disguised as editorial, and we disclose all relationships.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- The Team -->
+          <section class="about-section">
+            <h2>The Team</h2>
+            <p>
+              Monument & Grain is edited by a small team of architects, designers, and writers based in Copenhagen, London, and New York. We work with a wider network of contributing writers and photographers around the world.
+            </p>
+            <div class="team-grid">
+              <div class="team-card">
+                <div class="name">Elena Marsh</div>
+                <div class="role">Editor-in-Chief</div>
+                <p class="bio">Trained as an architect at the Royal Danish Academy. Formerly a designer at a Copenhagen practice specializing in residential work. Writes on minimalism, materials, and domestic space.</p>
+              </div>
+              <div class="team-card">
+                <div class="name">James Okafor</div>
+                <div class="role">Senior Editor</div>
+                <p class="bio">Architect and urbanist based in London. Teaches at the Bartlett and writes on facades, public space, and the social life of buildings.</p>
+              </div>
+              <div class="team-card">
+                <div class="name">Clara Voss</div>
+                <div class="role">Materials Editor</div>
+                <p class="bio">A materials scientist by training, Clara writes on stone, timber, and the chemistry of honest construction. Based in New York.</p>
+              </div>
+              <div class="team-card">
+                <div class="name">Contributors</div>
+                <div class="role">Worldwide</div>
+                <p class="bio">We work with a network of architects, interior designers, photographers, and writers across Europe, North America, and Asia.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- How We Work -->
+          <section class="about-section">
+            <h2>How We Work</h2>
+            <p>
+              Monument & Grain is published independently. We are not owned by a media conglomerate, an advertising agency, or a furniture brand. Our revenue comes from reader subscriptions and from carefully selected partnerships that align with our editorial values.
+            </p>
+            <p>
+              We do not accept payment for coverage. We do not publish advertorials. When we partner with a brand or institution—for a sponsored series, for example—we label it clearly and maintain full editorial control over the content. Our readers' trust is the only asset we have, and we protect it carefully.
+            </p>
+            <p>
+              If you are interested in working with us, please see our <a href="contact.html" style="color:var(--terra); text-decoration:underline; text-underline-offset:2px;">contact page</a>.
+            </p>
+          </section>
+
+          <!-- FAQ -->
+          <section id="faq" class="faq-section" aria-label="Frequently asked questions">
+            <div class="section-header" style="margin-bottom:1.8rem; border-bottom:1px solid var(--ash); padding-bottom:0.8rem; display:flex; justify-content:space-between; align-items:baseline;">
+              <h2 style="font-size:1.4rem;">Frequently Asked Questions</h2>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                <h4>Who writes for Monument & Grain?</h4>
+                <span aria-hidden="true">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>Our articles are written by practicing architects, interior designers, materials specialists, and experienced design journalists. Every contributor has direct experience in the field they write about. We do not use AI to generate editorial content.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                <h4>How often do you publish?</h4>
+                <span aria-hidden="true">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>We publish two to three new articles each week, plus a weekly newsletter. Long-form guides and critical essays appear roughly once a month. Quality and depth matter more to us than volume.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                <h4>Can I pitch an article?</h4>
+                <span aria-hidden="true">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>Yes. We welcome thoughtful pitches from writers and practitioners. Please send a brief outline (200–300 words) along with relevant writing samples to editors@monumentandgrain.com. We read every pitch, though we cannot always respond individually.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                <h4>Do you accept sponsored content?</h4>
+                <span aria-hidden="true">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>We occasionally work with brands and institutions on clearly labeled sponsored series, but we do not publish advertorials disguised as editorial. All partnerships are disclosed at the top of the article, and we retain full editorial control over the content.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                <h4>How can I support the publication?</h4>
+                <span aria-hidden="true">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>The best way to support us is to subscribe to our newsletter and share our articles with others who might find them useful. We also offer a paid membership with access to our full archive and occasional member-only essays.</p>
+              </div>
+            </div>
+
+          </section>
+
+        </div>
+
+        <!-- ===== SIDEBAR ===== -->
+        <aside class="sidebar" role="complementary" aria-label="Sidebar">
+
+          <!-- Categories -->
+          <div class="sidebar-section">
+            <h4>Explore by Topic</h4>
+            <ul class="sidebar-list">
+              <li><a href="index.html#articles">Architecture</a><span class="meta">12 articles</span></li>
+              <li><a href="index.html#articles">Materials</a><span class="meta">8 articles</span></li>
+              <li><a href="index.html#articles">Lighting</a><span class="meta">6 articles</span></li>
+              <li><a href="index.html#articles">Small Spaces</a><span class="meta">5 articles</span></li>
+              <li><a href="index.html#articles">Home Design</a><span class="meta">9 articles</span></li>
+              <li><a href="index.html#articles">Furniture</a><span class="meta">4 articles</span></li>
+            </ul>
+          </div>
+
+          <!-- Popular Articles -->
+          <div class="sidebar-section">
+            <h4>Most Read</h4>
+            <ul class="sidebar-list">
+              <li>
+                <a href="index.html#article-4">Lighting the Void: A Practical Guide to Layered Illumination</a>
+                <span class="meta">12 min read</span>
+              </li>
+              <li>
+                <a href="index.html#article-2">The Anatomy of a Facade: Reading Buildings from the Street</a>
+                <span class="meta">11 min read</span>
+              </li>
+              <li>
+                <a href="index.html#article-6">Floor Plans Are Arguments: How Layout Shapes Daily Life</a>
+                <span class="meta">10 min read</span>
+              </li>
+              <li>
+                <a href="index.html#article-1">The Quiet Power of Restraint: Why Minimalism Still Matters</a>
+                <span class="meta">9 min read</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- From the Editors -->
+          <div class="author-box">
+            <h4>From the Editors</h4>
+            <p class="author-bio">
+              Monument & Grain is an independent publication written by practicing architects, interior designers, and materials specialists. We believe that good writing about space is as important as good building. Our aim is clarity, depth, and practical usefulness—no trend-chasing, no superficial gloss.
+            </p>
+          </div>
+
+          <!-- Quote -->
+          <div class="sidebar-section">
+            <h4>Marginalia</h4>
+            <p style="font-family:var(--serif); font-size:0.95rem; line-height:1.6; color:var(--stone); font-style:italic;">
+              "The details are not the details. They make the design."<br />
+              <span style="font-style:normal; font-family:var(--sans); font-size:0.75rem; color:var(--muted); display:block; margin-top:0.5rem;">— Charles Eames</span>
+            </p>
+          </div>
+
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <span class="brand-mark">Monument & Grain</span>
+          <p>An independent editorial publication about architecture, interior design, materials, and the principles that shape spaces worth living in.</p>
+        </div>
+
+        <div class="footer-col">
+          <h5>Explore</h5>
+          <ul>
+            <li><a href="index.html#articles">Articles</a></li>
+            <li><a href="index.html#long-form">Guides</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Legal</h5>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Use</a></li>
+            <li><a href="cookies.html">Cookie Policy</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Connect</h5>
+          <ul>
+            <li><a href="#" aria-label="Newsletter">Newsletter</a></li>
+            <li><a href="#" aria-label="Instagram">Instagram</a></li>
+            <li><a href="#" aria-label="RSS Feed">RSS</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Monument & Grain. All rights reserved.</span>
+        <span>Designed and written for people who read.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      'use strict';
+
+      // ===== MOBILE NAV TOGGLE =====
+      const navToggle = document.querySelector('.nav-toggle');
+      const mainNav = document.getElementById('mainNav');
+
+      navToggle.addEventListener('click', function() {
+        const expanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', !expanded);
+        mainNav.classList.toggle('open');
+      });
+
+      // Close nav on link click (mobile)
+      mainNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth <= 860) {
+            mainNav.classList.remove('open');
+            navToggle.setAttribute('aria-expanded', 'false');
+          }
+        });
+      });
+
+      // ===== FAQ ACCORDION =====
+      const faqQuestions = document.querySelectorAll('.faq-question');
+
+      faqQuestions.forEach(question => {
+        question.addEventListener('click', function() {
+          const answer = this.nextElementSibling;
+          const isOpen = answer.classList.contains('open');
+
+          // Close all others
+          faqQuestions.forEach(q => {
+            q.classList.remove('open');
+            q.setAttribute('aria-expanded', 'false');
+            q.nextElementSibling.classList.remove('open');
+          });
+
+          // Toggle current
+          if (!isOpen) {
+            this.classList.add('open');
+            this.setAttribute('aria-expanded', 'true');
+            answer.classList.add('open');
+          }
+        });
+
+        // Keyboard support
+        question.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            this.click();
+          }
+        });
+      });
+
+      // ===== SEARCH (placeholder for about page) =====
+      const searchInput = document.getElementById('searchInput');
+      searchInput.addEventListener('input', function() {
+        // On about page, search would ideally redirect or filter—this is a simple placeholder.
+        // For a full implementation, you might redirect to index.html with query params.
+      });
+
+    })();
+  </script>
+</body>
+</html>

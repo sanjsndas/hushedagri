@@ -1,0 +1,1761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Monument & Grain — Architecture, Interiors, Materials, and the Quiet Craft of Space</title>
+  <meta name="description" content="A considered editorial publication exploring residential architecture, interior design, materials, lighting, and the principles that shape enduring spaces. Written for practitioners and discerning homeowners." />
+  <meta name="author" content="Monument & Grain" />
+  <link rel="canonical" href="https://monumentandgrain.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Monument & Grain — Architecture, Interiors, Materials" />
+  <meta property="og:description" content="A quiet, editorial publication about the craft of space: residential architecture, interior design, materials, and enduring principles." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://monumentandgrain.com/" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&h=630&fit=crop" />
+  <meta property="og:site_name" content="Monument & Grain" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Monument & Grain",
+    "description": "An editorial publication about interior design, residential architecture, materials, lighting, and the principles of enduring space.",
+    "url": "https://monumentandgrain.com/",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Monument & Grain"
+    }
+  }
+  </script>
+
+  <style>
+    /* ===== RESET & BASE ===== */
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --canvas: #f3f3f2;
+      --paper: #ffffff;
+      --linen: #e7e6e4;
+      --ash: #d1d1d2;
+      --ink: #1a1a1e;
+      --stone: #5e5e62;
+      --muted: #8b8b90;
+      --terra: #a05a2c;
+      --serif: 'Georgia', 'Times New Roman', 'Instrument Serif', serif;
+      --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Instrument Sans', 'Helvetica Neue', sans-serif;
+      --content-width: 1240px;
+      --sidebar-width: 320px;
+      --gutter: 2rem;
+      --radius: 0px;
+    }
+
+    html {
+      font-size: 100%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--sans);
+      background-color: var(--canvas);
+      color: var(--ink);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      padding: 0;
+      margin: 0;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button, input, select, textarea {
+      font-family: inherit;
+      font-size: inherit;
+      border: none;
+      background: none;
+      outline: none;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    ul, ol {
+      list-style: none;
+    }
+
+    /* ===== TYPOGRAPHY ===== */
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--serif);
+      font-weight: 400;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+    }
+
+    h1 { font-size: 2.6rem; }
+    h2 { font-size: 2rem; }
+    h3 { font-size: 1.5rem; }
+    h4 { font-size: 1.2rem; }
+
+    .label {
+      font-family: var(--sans);
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--stone);
+    }
+
+    .meta {
+      font-size: 0.78rem;
+      color: var(--muted);
+      letter-spacing: 0.02em;
+    }
+
+    .reading-time {
+      font-size: 0.75rem;
+      color: var(--stone);
+      letter-spacing: 0.03em;
+    }
+
+    /* ===== LAYOUT ===== */
+    .container {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 0 var(--gutter);
+    }
+
+    .layout-grid {
+      display: grid;
+      grid-template-columns: 1fr var(--sidebar-width);
+      gap: 3.5rem;
+      align-items: start;
+    }
+
+    @media (max-width: 980px) {
+      .layout-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+    }
+
+    /* ===== HEADER ===== */
+    .site-header {
+      background-color: var(--paper);
+      border-bottom: 1px solid var(--ash);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+      gap: 2rem;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+      flex-shrink: 0;
+    }
+
+    .brand-mark {
+      font-family: var(--serif);
+      font-size: 1.45rem;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+    }
+
+    .brand-tagline {
+      font-family: var(--sans);
+      font-size: 0.6rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--stone);
+      margin-top: 2px;
+    }
+
+    .main-nav {
+      display: flex;
+      gap: 1.8rem;
+      align-items: center;
+    }
+
+    .main-nav a {
+      font-size: 0.85rem;
+      letter-spacing: 0.02em;
+      color: var(--stone);
+      transition: color 0.2s;
+      white-space: nowrap;
+    }
+
+    .main-nav a:hover {
+      color: var(--ink);
+    }
+
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      padding: 8px;
+    }
+
+    .nav-toggle span {
+      display: block;
+      width: 22px;
+      height: 1.5px;
+      background: var(--ink);
+    }
+
+    @media (max-width: 860px) {
+      .main-nav {
+        display: none;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        right: 0;
+        background: var(--paper);
+        flex-direction: column;
+        padding: 1.5rem var(--gutter);
+        border-bottom: 1px solid var(--ash);
+        gap: 1.2rem;
+        align-items: flex-start;
+      }
+      .main-nav.open {
+        display: flex;
+      }
+      .nav-toggle {
+        display: flex;
+      }
+      .header-inner {
+        position: relative;
+      }
+    }
+
+    /* ===== SEARCH BAR ===== */
+    .search-bar {
+      display: flex;
+      align-items: center;
+      border: 1px solid var(--ash);
+      background: var(--paper);
+      padding: 0.4rem 0.8rem;
+      gap: 0.5rem;
+      width: 240px;
+    }
+
+    .search-bar input {
+      border: none;
+      background: transparent;
+      font-size: 0.82rem;
+      color: var(--ink);
+      width: 100%;
+      padding: 0.3rem 0;
+    }
+
+    .search-bar input::placeholder {
+      color: var(--muted);
+      font-size: 0.78rem;
+    }
+
+    .search-bar svg {
+      width: 16px;
+      height: 16px;
+      stroke: var(--stone);
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 860px) {
+      .search-bar {
+        width: 100%;
+      }
+    }
+
+    /* ===== MAIN CONTENT ===== */
+    .site-main {
+      padding: 2.5rem 0 4rem;
+    }
+
+    /* ===== SECTION HEADERS ===== */
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 1.8rem;
+      border-bottom: 1px solid var(--ash);
+      padding-bottom: 0.8rem;
+    }
+
+    .section-header h2 {
+      font-family: var(--serif);
+      font-size: 1.4rem;
+      letter-spacing: -0.01em;
+    }
+
+    .section-header a {
+      font-size: 0.78rem;
+      color: var(--stone);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .section-header a:hover {
+      color: var(--ink);
+    }
+
+    /* ===== ARTICLE CARDS ===== */
+    .article-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2.2rem;
+    }
+
+    .article-card {
+      background: var(--paper);
+      border: 1px solid var(--ash);
+      display: flex;
+      flex-direction: column;
+      transition: border-color 0.2s;
+    }
+
+    .article-card:hover {
+      border-color: var(--stone);
+    }
+
+    .article-card-image {
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+      background: var(--linen);
+    }
+
+    .article-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .article-card:hover .article-card-image img {
+      transform: scale(1.02);
+    }
+
+    .article-card-body {
+      padding: 1.4rem 1.3rem 1.6rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .article-card .category-label {
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--terra);
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+
+    .article-card h3 {
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      line-height: 1.3;
+      margin-bottom: 0.6rem;
+      letter-spacing: -0.005em;
+    }
+
+    .article-card h3 a:hover {
+      color: var(--terra);
+    }
+
+    .article-card .excerpt {
+      font-size: 0.85rem;
+      color: var(--stone);
+      line-height: 1.55;
+      margin-bottom: 1rem;
+      flex: 1;
+    }
+
+    .article-card .card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 0.8rem;
+      border-top: 1px solid var(--linen);
+    }
+
+    .article-card .author {
+      font-size: 0.72rem;
+      color: var(--muted);
+      letter-spacing: 0.02em;
+    }
+
+    .article-card .reading-time {
+      font-size: 0.7rem;
+      color: var(--muted);
+    }
+
+    /* ===== FEATURED ARTICLE ===== */
+    .featured-article {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      background: var(--paper);
+      border: 1px solid var(--ash);
+      margin-bottom: 2.5rem;
+    }
+
+    .featured-article-image {
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      background: var(--linen);
+    }
+
+    .featured-article-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .featured-article-body {
+      padding: 2.2rem 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .featured-article-body .category-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--terra);
+      font-weight: 500;
+      margin-bottom: 0.7rem;
+    }
+
+    .featured-article-body h2 {
+      font-family: var(--serif);
+      font-size: 1.8rem;
+      line-height: 1.2;
+      margin-bottom: 0.8rem;
+      letter-spacing: -0.015em;
+    }
+
+    .featured-article-body .excerpt {
+      font-size: 0.92rem;
+      color: var(--stone);
+      line-height: 1.6;
+      margin-bottom: 1.2rem;
+    }
+
+    .featured-article-body .meta-row {
+      display: flex;
+      gap: 1.2rem;
+      align-items: center;
+      font-size: 0.75rem;
+      color: var(--muted);
+      padding-top: 1rem;
+      border-top: 1px solid var(--linen);
+    }
+
+    @media (max-width: 750px) {
+      .featured-article {
+        grid-template-columns: 1fr;
+      }
+      .featured-article-body {
+        padding: 1.5rem 1.3rem;
+      }
+      .featured-article-body h2 {
+        font-size: 1.4rem;
+      }
+    }
+
+    /* ===== SIDEBAR ===== */
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+
+    .sidebar-section {
+      background: var(--paper);
+      border: 1px solid var(--ash);
+      padding: 1.5rem 1.4rem;
+    }
+
+    .sidebar-section h4 {
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 1px solid var(--linen);
+    }
+
+    .sidebar-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+    }
+
+    .sidebar-list li {
+      font-size: 0.85rem;
+      line-height: 1.4;
+      color: var(--ink);
+    }
+
+    .sidebar-list li a:hover {
+      color: var(--terra);
+    }
+
+    .sidebar-list .meta {
+      display: block;
+      margin-top: 0.2rem;
+      font-size: 0.7rem;
+      color: var(--muted);
+    }
+
+    .category-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .category-tag {
+      font-size: 0.72rem;
+      letter-spacing: 0.04em;
+      padding: 0.35rem 0.8rem;
+      border: 1px solid var(--ash);
+      background: var(--paper);
+      color: var(--stone);
+      cursor: pointer;
+      transition: all 0.2s;
+      text-transform: uppercase;
+    }
+
+    .category-tag:hover,
+    .category-tag.active {
+      background: var(--ink);
+      color: var(--paper);
+      border-color: var(--ink);
+    }
+
+    .author-box {
+      background: var(--paper);
+      border: 1px solid var(--ash);
+      padding: 1.5rem 1.4rem;
+    }
+
+    .author-box .author-name {
+      font-family: var(--serif);
+      font-size: 1rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .author-box .author-bio {
+      font-size: 0.8rem;
+      color: var(--stone);
+      line-height: 1.55;
+      margin-top: 0.6rem;
+    }
+
+    /* ===== NEWSLETTER ===== */
+    .newsletter-section {
+      background: var(--paper);
+      border: 1px solid var(--ash);
+      padding: 2.5rem 2rem;
+      margin: 3rem 0;
+      text-align: center;
+    }
+
+    .newsletter-section h3 {
+      font-family: var(--serif);
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .newsletter-section p {
+      font-size: 0.88rem;
+      color: var(--stone);
+      margin-bottom: 1.5rem;
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .newsletter-form {
+      display: flex;
+      gap: 0.8rem;
+      max-width: 460px;
+      margin: 0 auto;
+    }
+
+    .newsletter-form input {
+      flex: 1;
+      border: 1px solid var(--ash);
+      background: var(--canvas);
+      padding: 0.7rem 1rem;
+      font-size: 0.85rem;
+      color: var(--ink);
+    }
+
+    .newsletter-form input::placeholder {
+      color: var(--muted);
+    }
+
+    .newsletter-form button {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 0.7rem 1.4rem;
+      font-size: 0.78rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: background 0.2s;
+      white-space: nowrap;
+    }
+
+    .newsletter-form button:hover {
+      background: var(--terra);
+    }
+
+    @media (max-width: 600px) {
+      .newsletter-form {
+        flex-direction: column;
+      }
+    }
+
+    /* ===== FAQ ===== */
+    .faq-section {
+      margin: 3rem 0;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--ash);
+      padding: 1.2rem 0;
+    }
+
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      gap: 1rem;
+    }
+
+    .faq-question h4 {
+      font-family: var(--sans);
+      font-size: 0.95rem;
+      font-weight: 500;
+      letter-spacing: -0.005em;
+    }
+
+    .faq-question span {
+      font-size: 1.1rem;
+      color: var(--stone);
+      transition: transform 0.2s;
+      flex-shrink: 0;
+    }
+
+    .faq-question.open span {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.35s ease;
+      padding: 0;
+    }
+
+    .faq-answer.open {
+      max-height: 300px;
+      padding-top: 0.8rem;
+    }
+
+    .faq-answer p {
+      font-size: 0.85rem;
+      color: var(--stone);
+      line-height: 1.6;
+    }
+
+    /* ===== FOOTER ===== */
+    .site-footer {
+      background: var(--paper);
+      border-top: 1px solid var(--ash);
+      padding: 3rem 0 2rem;
+      margin-top: 3rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 2.5rem;
+    }
+
+    .footer-brand .brand-mark {
+      font-size: 1.2rem;
+    }
+
+    .footer-brand p {
+      font-size: 0.8rem;
+      color: var(--stone);
+      line-height: 1.55;
+      margin-top: 0.8rem;
+      max-width: 320px;
+    }
+
+    .footer-col h5 {
+      font-family: var(--sans);
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--stone);
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .footer-col ul {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .footer-col ul li a {
+      font-size: 0.82rem;
+      color: var(--ink);
+      transition: color 0.2s;
+    }
+
+    .footer-col ul li a:hover {
+      color: var(--terra);
+    }
+
+    .footer-bottom {
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--linen);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.72rem;
+      color: var(--muted);
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-bottom a {
+      color: var(--muted);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .footer-bottom a:hover {
+      color: var(--ink);
+    }
+
+    @media (max-width: 800px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ===== LONG-FORM ARTICLE SECTION ===== */
+    .long-form-section {
+      margin: 3rem 0;
+      padding-top: 2rem;
+      border-top: 2px solid var(--ash);
+    }
+
+    .long-form-section .article-body {
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: var(--ink);
+    }
+
+    .long-form-section .article-body p {
+      margin-bottom: 1.2rem;
+    }
+
+    .long-form-section .article-body h2 {
+      font-family: var(--serif);
+      font-size: 1.6rem;
+      margin: 2.2rem 0 0.8rem;
+      letter-spacing: -0.01em;
+    }
+
+    .long-form-section .article-body h3 {
+      font-family: var(--serif);
+      font-size: 1.25rem;
+      margin: 1.8rem 0 0.6rem;
+    }
+
+    .long-form-section .article-body ul,
+    .long-form-section .article-body ol {
+      margin: 0 0 1.2rem 1.5rem;
+      font-size: 0.9rem;
+      color: var(--stone);
+    }
+
+    .long-form-section .article-body ul li,
+    .long-form-section .article-body ol li {
+      margin-bottom: 0.4rem;
+    }
+
+    .long-form-section .article-body ul {
+      list-style: disc;
+    }
+
+    .long-form-section .article-body ol {
+      list-style: decimal;
+    }
+
+    .long-form-section .article-body blockquote {
+      border-left: 2px solid var(--terra);
+      padding-left: 1.5rem;
+      margin: 1.8rem 0;
+      font-style: italic;
+      color: var(--stone);
+      font-size: 1rem;
+      font-family: var(--serif);
+    }
+
+    .long-form-section .article-body img {
+      width: 100%;
+      margin: 1.5rem 0;
+    }
+
+    .long-form-section .article-body .img-caption {
+      font-size: 0.75rem;
+      color: var(--muted);
+      margin-top: -0.8rem;
+      margin-bottom: 1.5rem;
+      font-style: italic;
+    }
+
+    .long-form-section .article-body a {
+      color: var(--terra);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .long-form-section .article-body a:hover {
+      color: var(--ink);
+    }
+
+    .long-form-section .article-body hr {
+      border: none;
+      border-top: 1px solid var(--ash);
+      margin: 2.5rem 0;
+    }
+
+    /* ===== RELATED ARTICLES ===== */
+    .related-section {
+      margin: 3rem 0 2rem;
+    }
+
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 700px) {
+      .related-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .related-card {
+      background: var(--paper);
+      border: 1px solid var(--ash);
+      padding: 1.2rem 1.2rem 1.4rem;
+    }
+
+    .related-card .category-label {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--terra);
+      font-weight: 500;
+      margin-bottom: 0.4rem;
+    }
+
+    .related-card h4 {
+      font-family: var(--serif);
+      font-size: 0.95rem;
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+
+    .related-card h4 a:hover {
+      color: var(--terra);
+    }
+
+    .related-card .reading-time {
+      font-size: 0.68rem;
+      color: var(--muted);
+    }
+
+    /* ===== UTILITY ===== */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    /* ===== RESPONSIVE ADJUSTMENTS ===== */
+    @media (max-width: 600px) {
+      h1 { font-size: 1.8rem; }
+      h2 { font-size: 1.4rem; }
+      .container { padding: 0 1.2rem; }
+      .site-main { padding: 1.8rem 0 3rem; }
+    }
+
+    /* ===== SEARCH RESULTS ===== */
+    .search-results-info {
+      margin-bottom: 1.5rem;
+      font-size: 0.85rem;
+      color: var(--stone);
+    }
+
+    /* ===== ABOUT/CONTACT PRIVACY MODAL ===== */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(26, 26, 30, 0.5);
+      z-index: 200;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .modal-overlay.open {
+      display: flex;
+    }
+
+    .modal-content {
+      background: var(--paper);
+      max-width: 620px;
+      width: 100%;
+      max-height: 80vh;
+      overflow-y: auto;
+      padding: 2.5rem;
+      border: 1px solid var(--ash);
+    }
+
+    .modal-content h2 {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+
+    .modal-content p {
+      font-size: 0.85rem;
+      color: var(--stone);
+      line-height: 1.6;
+      margin-bottom: 0.8rem;
+    }
+
+    .modal-content .close-modal {
+      float: right;
+      font-size: 1.2rem;
+      color: var(--stone);
+      padding: 0 0.4rem;
+    }
+
+    .modal-content .close-modal:hover {
+      color: var(--ink);
+    }
+
+    /* ===== READING PROGRESS ===== */
+    .progress-bar {
+      height: 2px;
+      background: var(--terra);
+      width: 0%;
+      position: fixed;
+      top: 72px;
+      left: 0;
+      z-index: 99;
+      transition: width 0.1s;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <div class="brand">
+        <a href="/" class="brand-mark" aria-label="Monument & Grain — Home">Hushed Architectural Details</a>
+        <span class="brand-tagline">Architecture · Interiors · Materials</span>
+      </div>
+
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="main-nav" id="mainNav" role="navigation" aria-label="Primary">
+          <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="terms.html">Terms Of Privacy</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+					<li><a href="cookies.html">Cookies Policy</a></li> 
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+      </nav>
+
+      <div class="search-bar" role="search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+        </svg>
+        <input type="search" id="searchInput" placeholder="Search articles…" aria-label="Search articles" />
+      </div>
+    </div>
+  </header>
+
+  <div class="progress-bar" id="progressBar" aria-hidden="true"></div>
+
+  <!-- ===== MAIN ===== -->
+  <main class="site-main" role="main">
+    <div class="container">
+      <div class="layout-grid">
+
+        <!-- ===== PRIMARY CONTENT COLUMN ===== -->
+        <div class="primary-column" id="primaryContent">
+
+          <!-- ===== FEATURED ARTICLE ===== -->
+          <section class="featured-article" aria-label="Featured article">
+            <div class="featured-article-image">
+              <img
+                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80"
+                alt="Minimalist living room with warm wooden furniture, soft natural light, and a calm, restrained material palette"
+                loading="eager"
+              />
+            </div>
+            <div class="featured-article-body">
+              <span class="category-label">Modern Interiors</span>
+              <h2><a href="#article-1">The Quiet Power of Restraint: Why Minimalism Still Matters in Interior Design</a></h2>
+              <p class="excerpt">
+                Minimalism is not about emptiness. It is about intention—every object earning its place, every surface considered. In an era of visual noise, the most radical choice a designer can make is to edit rather than add.
+              </p>
+              <div class="meta-row">
+                <span>By Elena Marsh</span>
+                <span class="reading-time">9 min read</span>
+                <span>March 2026</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- ===== ARTICLE SECTIONS ===== -->
+          <section id="articles" aria-label="Latest articles">
+            <div class="section-header">
+              <h2>Latest Articles</h2>
+              <a href="#all-articles">View all →</a>
+            </div>
+
+            <div class="article-grid" id="articleGrid">
+
+              <!-- Card 1 -->
+              <article class="article-card" data-category="architecture" data-title="The Anatomy of a Facade: Reading Buildings from the Street">
+                <div class="article-card-image">
+                  <img
+                    src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=800&q=80"
+                    alt="Low-angle view of a modern building facade with recessed windows and geometric concrete forms"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="article-card-body">
+                  <span class="category-label">Architecture</span>
+                  <h3><a href="#article-2">The Anatomy of a Facade: Reading Buildings from the Street</a></h3>
+                  <p class="excerpt">A facade is more than a skin. It is a negotiation between structure, climate, light, and the public realm—a compressed language of material and proportion that rewards close reading.</p>
+                  <div class="card-footer">
+                    <span class="author">James Okafor</span>
+                    <span class="reading-time">11 min read</span>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Card 2 -->
+              <article class="article-card" data-category="materials" data-title="Travertine, Lime, and the Return of Honest Materials">
+                <div class="article-card-image">
+                  <img
+                    src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80"
+                    alt="Detail of warm travertine stone surface with visible natural texture and subtle veining"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="article-card-body">
+                  <span class="category-label">Materials</span>
+                  <h3><a href="#article-3">Travertine, Lime, and the Return of Honest Materials</a></h3>
+                  <p class="excerpt">After decades of synthetic veneers and engineered composites, architects and designers are returning to materials that age with dignity—and tell the truth about their origins.</p>
+                  <div class="card-footer">
+                    <span class="author">Clara Voss</span>
+                    <span class="reading-time">8 min read</span>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Card 3 -->
+              <article class="article-card" data-category="lighting" data-title="Lighting the Void: A Practical Guide to Layered Illumination">
+                <div class="article-card-image">
+                  <img
+                    src="https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?w=800&q=80"
+                    alt="Warm interior lighting with layered sources creating depth and shadow in a residential space"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="article-card-body">
+                  <span class="category-label">Lighting</span>
+                  <h3><a href="#article-4">Lighting the Void: A Practical Guide to Layered Illumination</a></h3>
+                  <p class="excerpt">Good lighting is invisible. It shapes mood, defines zones, and gives architecture its emotional register—yet most homes still rely on a single ceiling fixture. Here is how to do better.</p>
+                  <div class="card-footer">
+                    <span class="author">Elena Marsh</span>
+                    <span class="reading-time">12 min read</span>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Card 4 -->
+              <article class="article-card" data-category="small-spaces" data-title="The 48-Square-Metre Apartment That Feels Like a House">
+                <div class="article-card-image">
+                  <img
+                    src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&q=80"
+                    alt="Compact living space with built-in storage, a light palette, and clever spatial divisions"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="article-card-body">
+                  <span class="category-label">Small Spaces</span>
+                  <h3><a href="#article-5">The 48-Square-Metre Apartment That Feels Like a House</a></h3>
+                  <p class="excerpt">Small-space design is not about shrinking furniture. It is about rethinking circulation, sightlines, and the psychological weight of stuff. A case study in spatial generosity.</p>
+                  <div class="card-footer">
+                    <span class="author">James Okafor</span>
+                    <span class="reading-time">7 min read</span>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Card 5 -->
+              <article class="article-card" data-category="home-design" data-title="Floor Plans Are Arguments: How Layout Shapes Daily Life">
+                <div class="article-card-image">
+                  <img
+                    src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=80"
+                    alt="Architectural floor plan drawings on a desk with drafting tools and natural light"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="article-card-body">
+                  <span class="category-label">Home Design</span>
+                  <h3><a href="#article-6">Floor Plans Are Arguments: How Layout Shapes Daily Life</a></h3>
+                  <p class="excerpt">Every floor plan encodes assumptions about how people should live. Open-plan versus cellular, corridor versus room—these are not neutral choices. They are propositions about domesticity.</p>
+                  <div class="card-footer">
+                    <span class="author">Clara Voss</span>
+                    <span class="reading-time">10 min read</span>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Card 6 -->
+              <article class="article-card" data-category="furniture" data-title="The Case for Fewer, Better Things: Furniture as Long-Term Investment">
+                <div class="article-card-image">
+                  <img
+                    src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80"
+                    alt="Single well-crafted wooden chair against a neutral wall, emphasizing form and material quality"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="article-card-body">
+                  <span class="category-label">Furniture</span>
+                  <h3><a href="#article-7">The Case for Fewer, Better Things: Furniture as Long-Term Investment</a></h3>
+                  <p class="excerpt">Fast furniture is a false economy. A well-made chair outlives three cheap ones. The principles of endurance—joinery, material honesty, repairability—matter more than ever.</p>
+                  <div class="card-footer">
+                    <span class="author">Elena Marsh</span>
+                    <span class="reading-time">6 min read</span>
+                  </div>
+                </div>
+              </article>
+
+            </div>
+
+            <p class="search-results-info hidden" id="searchInfo"></p>
+          </section>
+
+          <!-- ===== LONG-FORM ARTICLE ===== -->
+          <section id="long-form" class="long-form-section" aria-label="Long-form guide">
+            <div class="section-header">
+              <h2>Long-Form Guide</h2>
+            </div>
+
+            <article id="article-1" class="article-body">
+
+              <h1 style="font-size:2rem; margin-bottom:0.3rem;">The Quiet Power of Restraint: Why Minimalism Still Matters in Interior Design</h1>
+              <p class="meta" style="margin-bottom:2rem;">By Elena Marsh · March 2026 · 9 min read</p>
+
+              <p>There is a particular kind of silence in a well-designed minimal interior. It is not the silence of absence—the dead air of an empty room—but the silence of resolution, of things being exactly where they should be and nowhere else. This is the promise that minimalism has always held: that less can, in fact, be more, and that the removal of the unnecessary allows the essential to speak with greater clarity.</p>
+
+              <p>Yet the word itself has become exhausted through overuse. "Minimalist" now describes everything from a bare white gallery to a Scandinavian-inspired living room to the default aesthetic of a software interface. The term has been flattened, stripped of its specificity, deployed as a shorthand for "clean" or "simple" or, worse, "cold." This is a loss. Because minimalism, at its best, is not an aesthetic preference. It is a discipline—a way of thinking about space, object, and attention that remains as relevant now as it was when the first modernist architects began their quiet revolution a century ago.</p>
+
+              <h2>The Origins of Restraint</h2>
+
+              <p>The intellectual foundations of minimalism in design stretch back further than most people realize. In eighteenth-century Japan, the tea masters of the Sen no Rikyū tradition developed an aesthetic of <em>wabi-sabi</em>—the beauty of imperfection, impermanence, and insufficiency—that rejected the ornate and the ostentatious in favor of the humble and the weathered. A single bamboo flower vase, a rough clay tea bowl, a tatami mat worn smooth by decades of use: these were not merely objects but arguments about the nature of beauty itself, and about the relationship between human beings and the material world.</p>
+
+              <p>In the West, the lineage runs through the Arts and Crafts movement's rejection of industrial excess, through Adolf Loos's polemical 1910 essay "Ornament and Crime," through the Bauhaus and De Stijl, and into the mid-century work of architects like Ludwig Mies van der Rohe, whose famous aphorism "less is more" became the rallying cry of a generation. Mies was not advocating for emptiness. He was arguing that the reduction of a building to its essential structure—its skeleton of steel, its skin of glass—allowed the architecture to engage more directly with light, proportion, and the human body. The Barcelona Pavilion, with its onyx wall and marble floor, is minimalist only in the sense that a sonnet is minimal: every element is doing necessary work.</p>
+
+              <h2>What Minimalism Is Not</h2>
+
+              <p>The contemporary misunderstanding of minimalism is worth addressing directly, because it has led to a great deal of bad design. Minimalism is not:</p>
+
+              <ul>
+                <li><strong>The absence of color.</strong> A minimalist room can be deeply, richly colored. What matters is not the palette but the discipline of its application. A single saturated wall, a floor of polished concrete, a linen curtain in a muted ochre—these can all exist within a minimalist framework if they are considered, deliberate, and integral to the whole.</li>
+                <li><strong>The absence of ornament.</strong> Ornament, when it emerges from the nature of the material and the logic of construction, is not antithetical to minimalism. The grain of a wooden beam, the reveal of a window jamb, the texture of a plastered wall—these are ornaments of a different kind, and they are often the most powerful.</li>
+                <li><strong>The absence of comfort.</strong> A minimalist interior is not an ascetic cell. It is a space designed for living, which means it must accommodate the body's need for warmth, softness, and rest. The key is that these comforts are integrated into the design rather than added on top of it.</li>
+                <li><strong>A style.</strong> This is perhaps the most important point. Minimalism is not a look that can be applied to a room like wallpaper. It is a process of subtraction, of asking what can be removed without loss, and of trusting that what remains will be sufficient.</li>
+              </ul>
+
+              <p>The best minimalist interiors are not austere. They are calm. The difference is significant. Austerity implies deprivation; calm implies a kind of active peace, a space that supports attention rather than demanding it.</p>
+
+              <h2>Restraint in Practice: Five Principles</h2>
+
+              <p>For designers and homeowners who wish to work within a minimalist framework—not as a style but as a method—the following principles offer a practical starting point.</p>
+
+              <h3>1. Begin with the plan, not the palette.</h3>
+
+              <p>Minimalism lives or dies in the floor plan. A cluttered layout cannot be rescued by a muted color scheme. Before selecting a single finish or fixture, the fundamental relationships between spaces must be resolved: how you move through the home, how light enters, how rooms connect and separate. The most powerful minimalist gesture is often architectural—a wall removed, a ceiling raised, a window enlarged—rather than decorative.</p>
+
+              <h3>2. Let materials speak.</h3>
+
+              <p>When you reduce the number of materials in a space, each one becomes more visible. A room with five different stones, six paint colors, and seven wood tones creates visual noise; the eye cannot settle. A room with two or three carefully chosen materials—say, lime plaster, oak, and travertine—allows each surface to be read and appreciated. The materials should be chosen not just for their appearance but for how they age, how they feel, and how they respond to light.</p>
+
+              <h3>3. Treat light as a material.</h3>
+
+              <p>In minimalist interiors, light is not an afterthought. It is the primary medium through which the space is experienced. This means thinking carefully about the direction of natural light throughout the day, about the placement and quality of artificial sources, and about the role of shadow. A room that is evenly, flatly lit will feel dull regardless of how beautiful its surfaces are. A room with modulated light—bright here, dim there, a shaft of sun across a wall at four in the afternoon—has depth and life.</p>
+
+              <h3>4. Store generously, display sparingly.</h3>
+
+              <p>One of the great contradictions of minimalist living is that it requires more storage, not less. The things of daily life—clothes, books, kitchen tools, papers—must have a place to go, or they will accumulate on surfaces and undermine the whole enterprise. Built-in storage, thoughtfully integrated into the architecture, is the unsung hero of minimalism. A wall of floor-to-ceiling cabinets in a muted finish can disappear into the background, allowing the few objects that are displayed to command attention.</p>
+
+              <h3>5. Edit ruthlessly, then edit again.</h3>
+
+              <p>The final principle is the hardest. Minimalism requires a willingness to let go—of objects that no longer serve, of habits of accumulation, of the fear that emptiness is somehow a failure. The reward is a space that breathes, that gives your attention back to you rather than scattering it across a thousand competing stimuli. This is not deprivation. It is a kind of wealth.</p>
+
+              <h2>The Case for Restraint in an Age of Excess</h2>
+
+              <p>We live in a culture that rewards more. More content, more choices, more things. The algorithms that shape so much of contemporary life are engines of accumulation, designed to keep us scrolling, clicking, buying. In this context, the decision to live with less—to choose a smaller home, a simpler wardrobe, a quieter palette—is not merely an aesthetic choice. It is a form of resistance.</p>
+
+              <p>This is why minimalism still matters. Not because it is trendy, not because it photographs well, but because it offers a counter-narrative to the relentless expansion of the material world. It suggests that satisfaction might be found not in addition but in subtraction, not in novelty but in depth, not in the next thing but in the thing that is already here, fully known, fully used, fully loved.</p>
+
+              <p>A minimalist interior is not an empty one. It is a space that has been edited until only the essential remains—and in that editing, it reveals something about the people who live there: their priorities, their attention, their willingness to let go. That is not coldness. It is a kind of intimacy. And it is available to anyone willing to pick up the eraser as well as the pen.</p>
+
+              <hr />
+
+              <h2>Further Reading</h2>
+              <p>For related perspectives, see our guides on <a href="#article-3">honest materials</a>, <a href="#article-4">layered lighting</a>, and <a href="#article-7">furniture as long-term investment</a>.</p>
+
+            </article>
+          </section>
+
+          <!-- ===== RELATED ARTICLES ===== -->
+          <section class="related-section" aria-label="Related articles">
+            <div class="section-header">
+              <h2>Related Reading</h2>
+            </div>
+            <div class="related-grid">
+
+              <article class="related-card">
+                <span class="category-label">Materials</span>
+                <h4><a href="#article-3">Travertine, Lime, and the Return of Honest Materials</a></h4>
+                <span class="reading-time">8 min read</span>
+              </article>
+
+              <article class="related-card">
+                <span class="category-label">Lighting</span>
+                <h4><a href="#article-4">Lighting the Void: A Practical Guide to Layered Illumination</a></h4>
+                <span class="reading-time">12 min read</span>
+              </article>
+
+              <article class="related-card">
+                <span class="category-label">Space Planning</span>
+                <h4><a href="#article-6">Floor Plans Are Arguments: How Layout Shapes Daily Life</a></h4>
+                <span class="reading-time">10 min read</span>
+              </article>
+
+            </div>
+          </section>
+
+          <!-- ===== FAQ ===== -->
+          <section id="faq" class="faq-section" aria-label="Frequently asked questions">
+            <div class="section-header">
+              <h2>Frequently Asked Questions</h2>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                <h4>What is the difference between interior design and interior architecture?</h4>
+                <span aria-hidden="true">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>Interior architecture typically involves structural changes—moving walls, altering floor plans, modifying building systems. Interior design focuses on the selection and arrangement of finishes, furniture, lighting, and color within an existing architectural framework. In practice, the two disciplines overlap significantly, and many designers work across both domains.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                <h4>How do I choose the right lighting for a living room?</h4>
+                <span aria-hidden="true">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>Think in layers: ambient (general illumination), task (reading, working), and accent (highlighting art or architecture). Avoid relying on a single overhead source. Use dimmers wherever possible, and consider warm color temperatures (2700K–3000K) for residential spaces. The goal is flexibility—the ability to shift the mood of the room throughout the day.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                <h4>Is minimalism practical for families with children?</h4>
+                <span aria-hidden="true">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>Yes, with adjustments. The key is generous storage and durable, easy-to-clean materials. A minimalist framework—clear circulation, uncluttered surfaces, a restrained palette—can actually make family life easier by reducing visual stress and making it simpler to find and put away belongings. The goal is not perfection but a system that supports daily life.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                <h4>What are the most common design mistakes homeowners make?</h4>
+                <span aria-hidden="true">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>The most frequent errors are: furniture that is too small for the room, insufficient lighting layers, ignoring scale in rugs and art, and prioritizing trends over enduring principles. Another common mistake is treating rooms in isolation rather than considering how they connect and relate to one another. Good design is holistic.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                <h4>How can I make a small space feel larger?</h4>
+                <span aria-hidden="true">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>Focus on three things: light, sightlines, and storage. Maximize natural light and use mirrors strategically. Keep sightlines clear—avoid blocking views with tall furniture. And invest in built-in storage so that everyday objects have a designated place. A light, continuous floor surface also helps; the eye reads the floor as a single plane, expanding the perceived size of the room.</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                <h4>What does "honest materials" mean in design?</h4>
+                <span aria-hidden="true">+</span>
+              </div>
+              <div class="faq-answer">
+                <p>It means using materials in ways that reflect their true nature—solid wood that looks and feels like wood, stone that reveals its geological character, plaster that carries the mark of the hand. Honest materials are not disguised or imitated. They are allowed to age and patina, acquiring character over time rather than deteriorating into shabbiness.</p>
+              </div>
+            </div>
+
+          </section>
+
+          <!-- ===== NEWSLETTER ===== -->
+          <section class="newsletter-section" aria-label="Newsletter">
+            <h3>Stay informed</h3>
+            <p>Receive our weekly dispatch on architecture, interiors, and the craft of space. No noise, no filler—just considered writing for people who care about the built environment.</p>
+            <form class="newsletter-form" id="newsletterForm" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Subscribed'; this.querySelector('input').disabled=true;">
+              <input type="email" placeholder="Your email address" required aria-label="Email address" />
+              <button type="submit">Subscribe</button>
+            </form>
+          </section>
+
+        </div>
+
+        <!-- ===== SIDEBAR ===== -->
+        <aside class="sidebar" role="complementary" aria-label="Sidebar">
+
+          <!-- Categories -->
+          <div class="sidebar-section">
+            <h4>Browse by Category</h4>
+            <div class="category-tags" id="categoryTags">
+              <button class="category-tag active" data-category="all">All</button>
+              <button class="category-tag" data-category="architecture">Architecture</button>
+              <button class="category-tag" data-category="materials">Materials</button>
+              <button class="category-tag" data-category="lighting">Lighting</button>
+              <button class="category-tag" data-category="small-spaces">Small Spaces</button>
+              <button class="category-tag" data-category="home-design">Home Design</button>
+              <button class="category-tag" data-category="furniture">Furniture</button>
+            </div>
+          </div>
+
+          <!-- Popular Articles -->
+          <div class="sidebar-section">
+            <h4>Most Read</h4>
+            <ul class="sidebar-list">
+              <li>
+                <a href="#article-4">Lighting the Void: A Practical Guide to Layered Illumination</a>
+                <span class="meta">12 min read</span>
+              </li>
+              <li>
+                <a href="#article-2">The Anatomy of a Facade: Reading Buildings from the Street</a>
+                <span class="meta">11 min read</span>
+              </li>
+              <li>
+                <a href="#article-6">Floor Plans Are Arguments: How Layout Shapes Daily Life</a>
+                <span class="meta">10 min read</span>
+              </li>
+              <li>
+                <a href="#article-1">The Quiet Power of Restraint: Why Minimalism Still Matters</a>
+                <span class="meta">9 min read</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Editor's Note -->
+          <div class="author-box">
+            <h4>From the Editors</h4>
+            <p class="author-bio">
+              Monument & Grain is an independent publication written by practicing architects, interior designers, and materials specialists. We believe that good writing about space is as important as good building. Our aim is clarity, depth, and practical usefulness—no trend-chasing, no superficial gloss.
+            </p>
+          </div>
+
+          <!-- Weekly Quote -->
+          <div class="sidebar-section">
+            <h4>Marginalia</h4>
+            <p style="font-family:var(--serif); font-size:0.95rem; line-height:1.6; color:var(--stone); font-style:italic;">
+              "Architecture is the thoughtful making of space."<br />
+              <span style="font-style:normal; font-family:var(--sans); font-size:0.75rem; color:var(--muted); display:block; margin-top:0.5rem;">— Louis Kahn</span>
+            </p>
+          </div>
+
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <span class="brand-mark">Monument & Grain</span>
+          <p>An independent editorial publication about architecture, interior design, materials, and the principles that shape spaces worth living in.</p>
+        </div>
+
+        <div class="footer-col">
+          <h5>Explore</h5>
+          <ul>
+            <li><a href="#articles">Articles</a></li>
+            <li><a href="#long-form">Guides</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#about" class="modal-link" data-modal="about">About</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Legal</h5>
+          <ul>
+            <li><a href="#privacy" class="modal-link" data-modal="privacy">Privacy Policy</a></li>
+            <li><a href="#terms" class="modal-link" data-modal="terms">Terms of Use</a></li>
+            <li><a href="#cookies" class="modal-link" data-modal="cookies">Cookie Policy</a></li>
+            <li><a href="#contact" class="modal-link" data-modal="contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Connect</h5>
+          <ul>
+            <li><a href="#" aria-label="Newsletter">Newsletter</a></li>
+            <li><a href="#" aria-label="Instagram">Instagram</a></li>
+            <li><a href="#" aria-label="RSS Feed">RSS</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Monument & Grain. All rights reserved.</span>
+        <span>Designed and written for people who read.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== MODAL OVERLAY ===== -->
+  <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-label="Information">
+    <div class="modal-content">
+      <button class="close-modal" id="closeModal" aria-label="Close">✕</button>
+      <div id="modalBody">
+        <h2>About Monument & Grain</h2>
+        <p>Monument & Grain is an independent editorial publication focused on architecture, interior design, and the material culture of the built environment. We publish long-form articles, practical guides, and critical essays for practitioners and discerning readers.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      'use strict';
+
+      // ===== MOBILE NAV TOGGLE =====
+      const navToggle = document.querySelector('.nav-toggle');
+      const mainNav = document.getElementById('mainNav');
+
+      navToggle.addEventListener('click', function() {
+        const expanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', !expanded);
+        mainNav.classList.toggle('open');
+      });
+
+      // Close nav on link click (mobile)
+      mainNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth <= 860) {
+            mainNav.classList.remove('open');
+            navToggle.setAttribute('aria-expanded', 'false');
+          }
+        });
+      });
+
+      // ===== SEARCH FUNCTIONALITY =====
+      const searchInput = document.getElementById('searchInput');
+      const articleGrid = document.getElementById('articleGrid');
+      const searchInfo = document.getElementById('searchInfo');
+      const allCards = () => Array.from(articleGrid.querySelectorAll('.article-card'));
+
+      function filterArticles(query) {
+        const q = query.trim().toLowerCase();
+        const cards = allCards();
+        let visibleCount = 0;
+
+        cards.forEach(card => {
+          const title = card.getAttribute('data-title')?.toLowerCase() || '';
+          const category = card.getAttribute('data-category')?.toLowerCase() || '';
+          const excerpt = card.querySelector('.excerpt')?.textContent.toLowerCase() || '';
+          const text = title + ' ' + category + ' ' + excerpt;
+
+          if (!q || text.includes(q)) {
+            card.classList.remove('hidden');
+            visibleCount++;
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+
+        // Update search info
+        if (q) {
+          searchInfo.classList.remove('hidden');
+          searchInfo.textContent = `${visibleCount} article${visibleCount !== 1 ? 's' : ''} found for "${query}"`;
+        } else {
+          searchInfo.classList.add('hidden');
+          searchInfo.textContent = '';
+        }
+
+        // Reset category tags when searching
+        if (q) {
+          document.querySelectorAll('.category-tag').forEach(t => t.classList.remove('active'));
+        }
+      }
+
+      searchInput.addEventListener('input', function() {
+        filterArticles(this.value);
+      });
+
+      // ===== CATEGORY FILTERING =====
+      const categoryTags = document.querySelectorAll('.category-tag');
+
+      categoryTags.forEach(tag => {
+        tag.addEventListener('click', function() {
+          const category = this.getAttribute('data-category');
+
+          // Update active state
+          categoryTags.forEach(t => t.classList.remove('active'));
+          this.classList.add('active');
+
+          // Clear search when filtering by category
+          searchInput.value = '';
+          searchInfo.classList.add('hidden');
+
+          // Filter cards
+          const cards = allCards();
+          cards.forEach(card => {
+            if (category === 'all' || card.getAttribute('data-category') === category) {
+              card.classList.remove('hidden');
+            } else {
+              card.classList.add('hidden');
+            }
+          });
+        });
+      });
+
+      // ===== FAQ ACCORDION =====
+      const faqQuestions = document.querySelectorAll('.faq-question');
+
+      faqQuestions.forEach(question => {
+        question.addEventListener('click', function() {
+          const answer = this.nextElementSibling;
+          const isOpen = answer.classList.contains('open');
+
+          // Close all others
+          faqQuestions.forEach(q => {
+            q.classList.remove('open');
+            q.setAttribute('aria-expanded', 'false');
+            q.nextElementSibling.classList.remove('open');
+          });
+
+          // Toggle current
+          if (!isOpen) {
+            this.classList.add('open');
+            this.setAttribute('aria-expanded', 'true');
+            answer.classList.add('open');
+          }
+        });
+
+        // Keyboard support
+        question.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            this.click();
+          }
+        });
+      });
+
+      // ===== MODAL FUNCTIONALITY =====
+      const modalOverlay = document.getElementById('modalOverlay');
+      const closeModal = document.getElementById('closeModal');
+      const modalBody = document.getElementById('modalBody');
+
+      const modalContent = {
+        about: {
+          title: 'About Monument & Grain',
+          body: `<p>Monument & Grain is an independent editorial publication focused on architecture, interior design, and the material culture of the built environment. We publish long-form articles, practical guides, and critical essays for practitioners and discerning readers.</p>
+                 <p>Our editorial stance is simple: depth over speed, principles over trends, clarity over cleverness. We believe that writing about space—like designing it—is a craft that rewards patience and precision.</p>
+                 <p>Founded in 2024, the publication is edited by a small team of architects, designers, and writers based in Copenhagen, London, and New York.</p>`
+        },
+        contact: {
+          title: 'Contact',
+          body: `<p>For editorial inquiries, pitches, and corrections: <strong>editors@monumentandgrain.com</strong></p>
+                 <p>For advertising and partnerships: <strong>partners@monumentandgrain.com</strong></p>
+                 <p>We welcome thoughtful pitches for long-form articles and practical guides. Please include a brief outline and relevant writing samples.</p>
+                 <p>We are unable to respond to every message individually, but we read everything.</p>`
+        },
+        privacy: {
+          title: 'Privacy Policy',
+          body: `<p>We collect minimal data necessary to operate this publication. This includes anonymous analytics about page visits and, if you subscribe, your email address for newsletter delivery.</p>
+                 <p>We do not sell, rent, or share your personal information with third parties. Newsletter subscribers can unsubscribe at any time via the link in every email.</p>
+                 <p>This site does not use tracking cookies for advertising purposes. Analytics are aggregated and anonymous.</p>`
+        },
+        terms: {
+          title: 'Terms of Use',
+          body: `<p>All content on Monument & Grain is protected by copyright. You may quote brief excerpts with attribution and a link to the original article. Reproduction of full articles requires written permission.</p>
+                 <p>The information provided on this site is for general informational purposes. We are not liable for any decisions made based on our content. For specific architectural or design advice, please consult a qualified professional.</p>`
+        },
+        cookies: {
+          title: 'Cookie Policy',
+          body: `<p>This site uses essential cookies only—those required for basic functionality. We do not use advertising, tracking, or third-party cookies.</p>
+                 <p>If you subscribe to our newsletter, your email address is stored securely and used solely for the purpose of delivering our weekly dispatch.</p>`
+        }
+      };
+
+      document.querySelectorAll('.modal-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const type = this.getAttribute('data-modal');
+          const content = modalContent[type];
+          if (content) {
+            modalBody.innerHTML = `<h2>${content.title}</h2>${content.body}`;
+            modalOverlay.classList.add('open');
+            document.body.style.overflow = 'hidden';
+          }
+        });
+      });
+
+      closeModal.addEventListener('click', () => {
+        modalOverlay.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+
+      modalOverlay.addEventListener('click', (e) => {
+        if (e.target === modalOverlay) {
+          modalOverlay.classList.remove('open');
+          document.body.style.overflow = '';
+        }
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modalOverlay.classList.contains('open')) {
+          modalOverlay.classList.remove('open');
+          document.body.style.overflow = '';
+        }
+      });
+
+      // ===== READING PROGRESS BAR =====
+      const progressBar = document.getElementById('progressBar');
+      const longFormSection = document.getElementById('long-form');
+
+      window.addEventListener('scroll', function() {
+        if (!longFormSection) return;
+        const rect = longFormSection.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        const sectionTop = rect.top;
+        const sectionHeight = rect.height;
+
+        if (sectionTop < windowHeight && sectionTop + sectionHeight > 0) {
+          const scrolled = Math.min(Math.max((windowHeight - sectionTop) / (sectionHeight + windowHeight), 0), 1);
+          progressBar.style.width = (scrolled * 100) + '%';
+          progressBar.style.opacity = '1';
+        } else {
+          progressBar.style.opacity = '0';
+          progressBar.style.width = '0%';
+        }
+      });
+
+      // ===== NEWSLETTER FORM =====
+      const newsletterForm = document.getElementById('newsletterForm');
+      if (newsletterForm) {
+        newsletterForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          const input = this.querySelector('input');
+          const button = this.querySelector('button');
+          if (input.value && input.value.includes('@')) {
+            button.textContent = 'Subscribed';
+            button.style.background = '#a05a2c';
+            input.disabled = true;
+          }
+        });
+      }
+
+    })();
+  </script>
+</body>
+</html>

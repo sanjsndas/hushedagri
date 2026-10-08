@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Monument & Grain</title>
+  <meta name="description" content="Get in touch with the editors of Monument & Grain for pitches, editorial inquiries, partnerships, or corrections." />
+  <meta name="author" content="Monument & Grain" />
+  <link rel="canonical" href="https://monumentandgrain.com/contact.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Contact — Monument & Grain" />
+  <meta property="og:description" content="Reach the editors for pitches, partnerships, and corrections." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://monumentandgrain.com/contact.html" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&h=630&fit=crop" />
+  <meta property="og:site_name" content="Monument & Grain" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact — Monument & Grain",
+    "url": "https://monumentandgrain.com/contact.html",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Monument & Grain"
+    }
+  }
+  </script>
+
+  <style>
+    /* ===== RESET & BASE ===== */
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --canvas: #f3f3f2;
+      --paper: #ffffff;
+      --linen: #e7e6e4;
+      --ash: #d1d1d2;
+      --ink: #1a1a1e;
+      --stone: #5e5e62;
+      --muted: #8b8b90;
+      --terra: #a05a2c;
+      --serif: 'Georgia', 'Times New Roman', 'Instrument Serif', serif;
+      --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Instrument Sans', 'Helvetica Neue', sans-serif;
+      --content-width: 1240px;
+      --sidebar-width: 320px;
+      --gutter: 2rem;
+      --radius: 0px;
+    }
+
+    html {
+      font-size: 100%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--sans);
+      background-color: var(--canvas);
+      color: var(--ink);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      padding: 0;
+      margin: 0;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button, input, select, textarea {
+      font-family: inherit;
+      font-size: inherit;
+      border: none;
+      background: none;
+      outline: none;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    ul, ol {
+      list-style: none;
+    }
+
+    /* ===== TYPOGRAPHY ===== */
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--serif);
+      font-weight: 400;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+    }
+
+    h1 { font-size: 2.6rem; }
+    h2 { font-size: 2rem; }
+    h3 { font-size: 1.5rem; }
+    h4 { font-size: 1.2rem; }
+
+    .label {
+      font-family: var(--sans);
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--stone);
+    }
+
+    .meta {
+      font-size: 0.78rem;
+      color: var(--muted);
+      letter-spacing: 0.02em;
+    }
+
+    .reading-time {
+      font-size: 0.75rem;
+      color: var(--stone);
+      letter-spacing: 0.03em;
+    }
+
+    /* ===== LAYOUT ===== */
+    .container {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 0 var(--gutter);
+    }
+
+    .layout-grid {
+      display: grid;
+      grid-template-columns: 1fr var(--sidebar-width);
+      gap: 3.5rem;
+      align-items: start;
+    }
+
+    @media (max-width: 980px) {
+      .layout-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+    }
+
+    /* ===== HEADER ===== */
+    .site-header {
+      background-color: var(--paper);
+      border-bottom: 1px solid var(--ash);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+      gap: 2rem;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+      flex-shrink: 0;
+    }
+
+    .brand-mark {
+      font-family: var(--serif);
+      font-size: 1.45rem;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+    }
+
+    .brand-tagline {
+      font-family: var(--sans);
+      font-size: 0.6rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--stone);
+      margin-top: 2px;
+    }
+
+    .main-nav {
+      display: flex;
+      gap: 1.8rem;
+      align-items: center;
+    }
+
+    .main-nav a {
+      font-size: 0.85rem;
+      letter-spacing: 0.02em;
+      color: var(--stone);
+      transition: color 0.2s;
+      white-space: nowrap;
+    }
+
+    .main-nav a:hover {
+      color: var(--ink);
+    }
+
+    .main-nav a.active {
+      color: var(--ink);
+      font-weight: 500;
+    }
+
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      padding: 8px;
+    }
+
+    .nav-toggle span {
+      display: block;
+      width: 22px;
+      height: 1.5px;
+      background: var(--ink);
+    }
+
+    @media (max-width: 860px) {
+      .main-nav {
+        display: none;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        right: 0;
+        background: var(--paper);
+        flex-direction: column;
+        padding: 1.5rem var(--gutter);
+        border-bottom: 1px solid var(--ash);
+        gap: 1.2rem;
+        align-items: flex-start;
+      }
+      .main-nav.open {
+        display: flex;
+      }
+      .nav-toggle {
+        display: flex;
+      }
+      .header-inner {
+        position: relative;
+      }
+    }
+
+    /* ===== SEARCH BAR ===== */
+    .search-bar {
+      display: flex;
+      align-items: center;
+      border: 1px solid var(--ash);
+      background: var(--paper);
+      padding: 0.4rem 0.8rem;
+      gap: 0.5rem;
+      width: 240px;
+    }
+
+    .search-bar input {
+      border: none;
+      background: transparent;
+      font-size: 0.82rem;
+      color: var(--ink);
+      width: 100%;
+      padding: 0.3rem 0;
+    }
+
+    .search-bar input::placeholder {
+      color: var(--muted);
+      font-size: 0.78rem;
+    }
+
+    .search-bar svg {
+      width: 16px;
+      height: 16px;
+      stroke: var(--stone);
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 860px) {
+      .search-bar {
+        width: 100%;
+      }
+    }
+
+    /* ===== MAIN CONTENT ===== */
+    .site-main {
+      padding: 2.5rem 0 4rem;
+    }
+
+    /* ===== SECTION HEADERS ===== */
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 1.8rem;
+      border-bottom: 1px solid var(--ash);
+      padding-bottom: 0.8rem;
+    }
+
+    .section-header h2 {
+      font-family: var(--serif);
+      font-size: 1.4rem;
+      letter-spacing: -0.01em;
+    }
+
+    .section-header a {
+      font-size: 0.78rem;
+      color: var(--stone);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .section-header a:hover {
+      color: var(--ink);
+    }
+
+    /* ===== CONTACT PAGE SPECIFIC ===== */
+    .contact-intro {
+      margin-bottom: 2.5rem;
+    }
+
+    .contact-intro h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.6rem;
+      letter-spacing: -0.02em;
+    }
+
+    .contact-intro p {
+      font-size: 1rem;
+      color: var(--stone);
+      max-width: 640px;
+      line-height: 1.65;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    @media (max-width: 750px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .contact-card {
+      background: var(--paper);
+      border: 1px solid var(--ash);
+      padding: 1.8rem 1.7rem 2rem;
+    }
+
+    .contact-card h3 {
+      font-family: var(--serif);
+      font-size: 1.2rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .contact-card .contact-sub {
+      font-size: 0.78rem;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .contact-card p {
+      font-size: 0.88rem;
+      color: var(--stone);
+      line-height: 1.6;
+      margin-bottom: 1.2rem;
+    }
+
+    .contact-card .email-link {
+      display: inline-block;
+      font-size: 0.95rem;
+      color: var(--terra);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color 0.2s;
+      margin-bottom: 0.3rem;
+    }
+
+    .contact-card .email-link:hover {
+      color: var(--ink);
+    }
+
+    .contact-card .response-note {
+      font-size: 0.75rem;
+      color: var(--muted);
+      margin-top: 0.5rem;
+      margin-bottom: 0;
+    }
+
+    .contact-card ul {
+      list-style: disc;
+      margin-left: 1.2rem;
+      font-size: 0.85rem;
+      color: var(--stone);
+      line-height: 1.6;
+    }
+
+    .contact-card ul li {
+      margin-bottom: 0.3rem;
+    }
+
+    /* ===== CONTACT FORM ===== */
+    .contact-form-section {
+      margin-top: 2.5rem;
+      background: var(--paper);
+      border: 1px solid var(--ash);
+      padding: 2.2rem 2rem 2.5rem;
+    }
+
+    .contact-form-section h2 {
+      font-family: var(--serif);
+      font-size: 1.5rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .contact-form-section .form-intro {
+      font-size: 0.88rem;
+      color: var(--stone);
+      margin-bottom: 1.8rem;
+      max-width: 560px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+      margin-bottom: 1.2rem;
+    }
+
+    @media (max-width: 600px) {
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    .form-group label {
+      font-size: 0.75rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--stone);
+      font-weight: 500;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      border: 1px solid var(--ash);
+      background: var(--canvas);
+      padding: 0.7rem 0.9rem;
+      font-size: 0.88rem;
+      color: var(--ink);
+      transition: border-color 0.2s;
+      width: 100%;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--stone);
+      background: var(--paper);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 140px;
+      line-height: 1.6;
+    }
+
+    .form-group select {
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%235e5e62' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 0.9rem center;
+      cursor: pointer;
+    }
+
+    .form-submit {
+      margin-top: 1.6rem;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .form-submit button {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 0.8rem 2rem;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: background 0.2s;
+    }
+
+    .form-submit button:hover {
+      background: var(--terra);
+    }
+
+    .form-submit .form-note {
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    .form-success {
+      display: none;
+      background: #e8f0e8;
+      border: 1px solid #b8c8b8;
+      padding: 1rem 1.2rem;
+      margin-top: 1.5rem;
+      font-size: 0.88rem;
+      color: #2a4a2a;
+    }
+
+    .form-success.visible {
+      display: block;
+    }
+
+    /* ===== LOCATION / EDITORIAL NOTE ===== */
+    .editorial-note {
+      margin-top: 2.5rem;
+      border-top: 2px solid var(--ash);
+      padding-top: 2rem;
+    }
+
+    .editorial-note h3 {
+      font-family: var(--serif);
+      font-size: 1.3rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .editorial-note p {
+      font-size: 0.9rem;
+      color: var(--stone);
+      line-height: 1.7;
+      max-width: 680px;
+    }
+
+    .editorial-note p + p {
+      margin-top: 0.8rem;
+    }
+
+    /* ===== SIDEBAR ===== */
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+
+    .sidebar-section {
+      background: var(--paper);
+      border: 1px solid var(--ash);
+      padding: 1.5rem 1.4rem;
+    }
+
+    .sidebar-section h4 {
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 1px solid var(--linen);
+    }
+
+    .sidebar-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+    }
+
+    .sidebar-list li {
+      font-size: 0.85rem;
+      line-height: 1.4;
+      color: var(--ink);
+    }
+
+    .sidebar-list li a:hover {
+      color: var(--terra);
+    }
+
+    .sidebar-list .meta {
+      display: block;
+      margin-top: 0.2rem;
+      font-size: 0.7rem;
+      color: var(--muted);
+    }
+
+    .category-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .category-tag {
+      font-size: 0.72rem;
+      letter-spacing: 0.04em;
+      padding: 0.35rem 0.8rem;
+      border: 1px solid var(--ash);
+      background: var(--paper);
+      color: var(--stone);
+      cursor: pointer;
+      transition: all 0.2s;
+      text-transform: uppercase;
+    }
+
+    .category-tag:hover,
+    .category-tag.active {
+      background: var(--ink);
+      color: var(--paper);
+      border-color: var(--ink);
+    }
+
+    .author-box {
+      background: var(--paper);
+      border: 1px solid var(--ash);
+      padding: 1.5rem 1.4rem;
+    }
+
+    .author-box .author-name {
+      font-family: var(--serif);
+      font-size: 1rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .author-box .author-bio {
+      font-size: 0.8rem;
+      color: var(--stone);
+      line-height: 1.55;
+      margin-top: 0.6rem;
+    }
+
+    /* ===== NEWSLETTER ===== */
+    .newsletter-section {
+      background: var(--paper);
+      border: 1px solid var(--ash);
+      padding: 2.5rem 2rem;
+      margin: 3rem 0;
+      text-align: center;
+    }
+
+    .newsletter-section h3 {
+      font-family: var(--serif);
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .newsletter-section p {
+      font-size: 0.88rem;
+      color: var(--stone);
+      margin-bottom: 1.5rem;
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .newsletter-form {
+      display: flex;
+      gap: 0.8rem;
+      max-width: 460px;
+      margin: 0 auto;
+    }
+
+    .newsletter-form input {
+      flex: 1;
+      border: 1px solid var(--ash);
+      background: var(--canvas);
+      padding: 0.7rem 1rem;
+      font-size: 0.85rem;
+      color: var(--ink);
+    }
+
+    .newsletter-form input::placeholder {
+      color: var(--muted);
+    }
+
+    .newsletter-form button {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 0.7rem 1.4rem;
+      font-size: 0.78rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: background 0.2s;
+      white-space: nowrap;
+    }
+
+    .newsletter-form button:hover {
+      background: var(--terra);
+    }
+
+    @media (max-width: 600px) {
+      .newsletter-form {
+        flex-direction: column;
+      }
+    }
+
+    /* ===== FOOTER ===== */
+    .site-footer {
+      background: var(--paper);
+      border-top: 1px solid var(--ash);
+      padding: 3rem 0 2rem;
+      margin-top: 3rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 2.5rem;
+    }
+
+    .footer-brand .brand-mark {
+      font-size: 1.2rem;
+    }
+
+    .footer-brand p {
+      font-size: 0.8rem;
+      color: var(--stone);
+      line-height: 1.55;
+      margin-top: 0.8rem;
+      max-width: 320px;
+    }
+
+    .footer-col h5 {
+      font-family: var(--sans);
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--stone);
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .footer-col ul {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .footer-col ul li a {
+      font-size: 0.82rem;
+      color: var(--ink);
+      transition: color 0.2s;
+    }
+
+    .footer-col ul li a:hover {
+      color: var(--terra);
+    }
+
+    .footer-bottom {
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--linen);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.72rem;
+      color: var(--muted);
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-bottom a {
+      color: var(--muted);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .footer-bottom a:hover {
+      color: var(--ink);
+    }
+
+    @media (max-width: 800px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ===== UTILITY ===== */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    /* ===== RESPONSIVE ADJUSTMENTS ===== */
+    @media (max-width: 600px) {
+      h1 { font-size: 1.8rem; }
+      h2 { font-size: 1.4rem; }
+      .container { padding: 0 1.2rem; }
+      .site-main { padding: 1.8rem 0 3rem; }
+      .contact-intro h1 { font-size: 1.6rem; }
+    }
+
+    /* ===== MODAL ===== */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(26, 26, 30, 0.5);
+      z-index: 200;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .modal-overlay.open {
+      display: flex;
+    }
+
+    .modal-content {
+      background: var(--paper);
+      max-width: 620px;
+      width: 100%;
+      max-height: 80vh;
+      overflow-y: auto;
+      padding: 2.5rem;
+      border: 1px solid var(--ash);
+    }
+
+    .modal-content h2 {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+
+    .modal-content p {
+      font-size: 0.85rem;
+      color: var(--stone);
+      line-height: 1.6;
+      margin-bottom: 0.8rem;
+    }
+
+    .modal-content .close-modal {
+      float: right;
+      font-size: 1.2rem;
+      color: var(--stone);
+      padding: 0 0.4rem;
+    }
+
+    .modal-content .close-modal:hover {
+      color: var(--ink);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <div class="brand">
+        <a href="index.html" class="brand-mark" aria-label="Monument & Grain — Home">Hushed Architectural Details</a>
+        <span class="brand-tagline">Architecture · Interiors · Materials</span>
+      </div>
+
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="main-nav" id="mainNav" role="navigation" aria-label="Primary">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="terms.html">Terms Of Privacy</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="cookies.html">Cookies Policy</a></li>
+        <li><a href="disclaimer.html">Disclaimer</a></li>
+        <li><a href="categories.html">Categories</a></li>
+      </nav>
+
+      <div class="search-bar" role="search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+        </svg>
+        <input type="search" id="searchInput" placeholder="Search articles…" aria-label="Search articles" />
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== MAIN ===== -->
+  <main class="site-main" role="main">
+    <div class="container">
+      <div class="layout-grid">
+
+        <!-- ===== PRIMARY CONTENT COLUMN ===== -->
+        <div class="primary-column">
+
+          <!-- ===== CONTACT INTRO ===== -->
+          <section class="contact-intro">
+            <h1>Contact</h1>
+            <p>
+              We welcome considered correspondence—pitches for long-form articles, editorial inquiries, partnership proposals, and corrections. Every message is read by a member of our editorial team, though we cannot always respond individually.
+            </p>
+          </section>
+
+          <!-- ===== CONTACT CARDS ===== -->
+          <div class="contact-grid">
+
+            <div class="contact-card">
+              <h3>Editorial</h3>
+              <p class="contact-sub">Pitches &amp; Submissions</p>
+              <p>
+                We publish long-form articles, practical guides, and critical essays on architecture, interiors, and material culture. If you have a story that fits our editorial stance—depth over speed, principles over trends—we would like to hear from you.
+              </p>
+              <a href="mailto:editors@monumentandgrain.com" class="email-link">editors@monumentandgrain.com</a>
+              <p class="response-note">Please include a brief outline and relevant writing samples. Response time: 5–10 business days.</p>
+            </div>
+
+            <div class="contact-card">
+              <h3>Partnerships</h3>
+              <p class="contact-sub">Advertising &amp; Collaborations</p>
+              <p>
+                We work with a small number of partners whose values align with our editorial mission. If you are interested in sponsoring a series, collaborating on a project, or advertising in our newsletter, please get in touch.
+              </p>
+              <a href="mailto:partners@monumentandgrain.com" class="email-link">partners@monumentandgrain.com</a>
+              <p class="response-note">We review partnership inquiries on a rolling basis.</p>
+            </div>
+
+          </div>
+
+          <div class="contact-grid" style="margin-top:2rem;">
+
+            <div class="contact-card">
+              <h3>Corrections</h3>
+              <p class="contact-sub">Accuracy &amp; Feedback</p>
+              <p>
+                We take accuracy seriously. If you have spotted an error in one of our articles, or if you have context that would improve a piece, please let us know. We are committed to transparency and will publish corrections where warranted.
+              </p>
+              <a href="mailto:corrections@monumentandgrain.com" class="email-link">corrections@monumentandgrain.com</a>
+              <p class="response-note">Please include the article title and a link where possible.</p>
+            </div>
+
+            <div class="contact-card">
+              <h3>General Inquiries</h3>
+              <p class="contact-sub">Everything Else</p>
+              <p>
+                For all other questions—permissions, reprints, speaking requests, or simply to say hello—use the address below. We read everything, even if we cannot reply to each message personally.
+              </p>
+              <a href="mailto:hello@monumentandgrain.com" class="email-link">hello@monumentandgrain.com</a>
+              <p class="response-note">Response time: 7–14 business days.</p>
+            </div>
+
+          </div>
+
+          <!-- ===== CONTACT FORM ===== -->
+          <section class="contact-form-section">
+            <h2>Send a message</h2>
+            <p class="form-intro">
+              Use the form below to get in touch with the editorial team. Please note that pitches for articles should be sent via email with a clear subject line.
+            </p>
+
+            <form id="contactForm" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Your name</label>
+                  <input type="text" id="name" name="name" placeholder="e.g. Elena Marsh" required />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email address</label>
+                  <input type="email" id="email" name="email" placeholder="you@example.com" required />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="subject">Subject</label>
+                  <select id="subject" name="subject" required>
+                    <option value="" disabled selected>Select a topic…</option>
+                    <option value="editorial">Editorial pitch</option>
+                    <option value="partnership">Partnership inquiry</option>
+                    <option value="correction">Correction or feedback</option>
+                    <option value="permissions">Permissions &amp; reprints</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="publication">Publication / Organisation (optional)</label>
+                  <input type="text" id="publication" name="publication" placeholder="Where are you writing from?" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Tell us what you have in mind…" required></textarea>
+              </div>
+
+              <div class="form-submit">
+                <button type="submit">Send message</button>
+                <span class="form-note">We aim to respond within 7–14 business days.</span>
+              </div>
+
+              <div class="form-success" id="formSuccess">
+                Thank you — your message has been received. A member of our editorial team will be in touch if a response is required.
+              </div>
+            </form>
+          </section>
+
+          <!-- ===== EDITORIAL NOTE ===== -->
+          <section class="editorial-note">
+            <h3>From the Editors</h3>
+            <p>
+              Monument &amp; Grain is an independent publication. We are not affiliated with any architectural practice, design studio, or commercial interest. Our editorial decisions are made solely on the basis of quality, relevance, and alignment with our mission: to publish considered writing about the built environment.
+            </p>
+            <p>
+              We do not accept sponsored content that masquerades as editorial. Any partnership or advertising is clearly labelled as such. If you are unsure whether your proposal fits, please ask before sending materials.
+            </p>
+          </section>
+
+        </div>
+
+        <!-- ===== SIDEBAR ===== -->
+        <aside class="sidebar" role="complementary" aria-label="Sidebar">
+
+          <!-- Categories -->
+          <div class="sidebar-section">
+            <h4>Browse by Category</h4>
+            <div class="category-tags" id="categoryTags">
+              <button class="category-tag active" data-category="all">All</button>
+              <button class="category-tag" data-category="architecture">Architecture</button>
+              <button class="category-tag" data-category="materials">Materials</button>
+              <button class="category-tag" data-category="lighting">Lighting</button>
+              <button class="category-tag" data-category="small-spaces">Small Spaces</button>
+              <button class="category-tag" data-category="home-design">Home Design</button>
+              <button class="category-tag" data-category="furniture">Furniture</button>
+            </div>
+          </div>
+
+          <!-- Popular Articles -->
+          <div class="sidebar-section">
+            <h4>Most Read</h4>
+            <ul class="sidebar-list">
+              <li>
+                <a href="index.html#article-4">Lighting the Void: A Practical Guide to Layered Illumination</a>
+                <span class="meta">12 min read</span>
+              </li>
+              <li>
+                <a href="index.html#article-2">The Anatomy of a Facade: Reading Buildings from the Street</a>
+                <span class="meta">11 min read</span>
+              </li>
+              <li>
+                <a href="index.html#article-6">Floor Plans Are Arguments: How Layout Shapes Daily Life</a>
+                <span class="meta">10 min read</span>
+              </li>
+              <li>
+                <a href="index.html#article-1">The Quiet Power of Restraint: Why Minimalism Still Matters</a>
+                <span class="meta">9 min read</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Editor's Note -->
+          <div class="author-box">
+            <h4>From the Editors</h4>
+            <p class="author-bio">
+              Monument &amp; Grain is an independent publication written by practicing architects, interior designers, and materials specialists. We believe that good writing about space is as important as good building. Our aim is clarity, depth, and practical usefulness—no trend-chasing, no superficial gloss.
+            </p>
+          </div>
+
+          <!-- Weekly Quote -->
+          <div class="sidebar-section">
+            <h4>Marginalia</h4>
+            <p style="font-family:var(--serif); font-size:0.95rem; line-height:1.6; color:var(--stone); font-style:italic;">
+              "Architecture is the thoughtful making of space."<br />
+              <span style="font-style:normal; font-family:var(--sans); font-size:0.75rem; color:var(--muted); display:block; margin-top:0.5rem;">— Louis Kahn</span>
+            </p>
+          </div>
+
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <span class="brand-mark">Monument &amp; Grain</span>
+          <p>An independent editorial publication about architecture, interior design, materials, and the principles that shape spaces worth living in.</p>
+        </div>
+
+        <div class="footer-col">
+          <h5>Explore</h5>
+          <ul>
+            <li><a href="index.html#articles">Articles</a></li>
+            <li><a href="index.html#long-form">Guides</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Legal</h5>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Use</a></li>
+            <li><a href="cookies.html">Cookie Policy</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Connect</h5>
+          <ul>
+            <li><a href="#" aria-label="Newsletter">Newsletter</a></li>
+            <li><a href="#" aria-label="Instagram">Instagram</a></li>
+            <li><a href="#" aria-label="RSS Feed">RSS</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Monument &amp; Grain. All rights reserved.</span>
+        <span>Designed and written for people who read.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== MODAL OVERLAY ===== -->
+  <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-label="Information">
+    <div class="modal-content">
+      <button class="close-modal" id="closeModal" aria-label="Close">✕</button>
+      <div id="modalBody">
+        <h2>About Monument &amp; Grain</h2>
+        <p>Monument &amp; Grain is an independent editorial publication focused on architecture, interior design, and the material culture of the built environment. We publish long-form articles, practical guides, and critical essays for practitioners and discerning readers.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      'use strict';
+
+      // ===== MOBILE NAV TOGGLE =====
+      const navToggle = document.querySelector('.nav-toggle');
+      const mainNav = document.getElementById('mainNav');
+
+      navToggle.addEventListener('click', function() {
+        const expanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', !expanded);
+        mainNav.classList.toggle('open');
+      });
+
+      // Close nav on link click (mobile)
+      mainNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth <= 860) {
+            mainNav.classList.remove('open');
+            navToggle.setAttribute('aria-expanded', 'false');
+          }
+        });
+      });
+
+      // ===== CONTACT FORM =====
+      const contactForm = document.getElementById('contactForm');
+      const formSuccess = document.getElementById('formSuccess');
+
+      if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+
+          // Simple validation
+          const name = document.getElementById('name').value.trim();
+          const email = document.getElementById('email').value.trim();
+          const subject = document.getElementById('subject').value;
+          const message = document.getElementById('message').value.trim();
+
+          if (!name || !email || !subject || !message) {
+            alert('Please fill in all required fields.');
+            return;
+          }
+
+          if (!email.includes('@') || !email.includes('.')) {
+            alert('Please enter a valid email address.');
+            return;
+          }
+
+          // Show success message, hide form
+          contactForm.style.display = 'none';
+          formSuccess.classList.add('visible');
+
+          // In a real implementation, you would send the data to a server here.
+          // For this demo, we simply show a success message.
+
+          // Optional: scroll to success message
+          formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+      }
+
+      // ===== MODAL FUNCTIONALITY =====
+      const modalOverlay = document.getElementById('modalOverlay');
+      const closeModal = document.getElementById('closeModal');
+      const modalBody = document.getElementById('modalBody');
+
+      const modalContent = {
+        about: {
+          title: 'About Monument & Grain',
+          body: `<p>Monument & Grain is an independent editorial publication focused on architecture, interior design, and the material culture of the built environment. We publish long-form articles, practical guides, and critical essays for practitioners and discerning readers.</p>
+                 <p>Our editorial stance is simple: depth over speed, principles over trends, clarity over cleverness. We believe that writing about space—like designing it—is a craft that rewards patience and precision.</p>
+                 <p>Founded in 2024, the publication is edited by a small team of architects, designers, and writers based in Copenhagen, London, and New York.</p>`
+        },
+        contact: {
+          title: 'Contact',
+          body: `<p>For editorial inquiries, pitches, and corrections: <strong>editors@monumentandgrain.com</strong></p>
+                 <p>For advertising and partnerships: <strong>partners@monumentandgrain.com</strong></p>
+                 <p>We welcome thoughtful pitches for long-form articles and practical guides. Please include a brief outline and relevant writing samples.</p>
+                 <p>We are unable to respond to every message individually, but we read everything.</p>`
+        },
+        privacy: {
+          title: 'Privacy Policy',
+          body: `<p>We collect minimal data necessary to operate this publication. This includes anonymous analytics about page visits and, if you subscribe, your email address for newsletter delivery.</p>
+                 <p>We do not sell, rent, or share your personal information with third parties. Newsletter subscribers can unsubscribe at any time via the link in every email.</p>
+                 <p>This site does not use tracking cookies for advertising purposes. Analytics are aggregated and anonymous.</p>`
+        },
+        terms: {
+          title: 'Terms of Use',
+          body: `<p>All content on Monument & Grain is protected by copyright. You may quote brief excerpts with attribution and a link to the original article. Reproduction of full articles requires written permission.</p>
+                 <p>The information provided on this site is for general informational purposes. We are not liable for any decisions made based on our content. For specific architectural or design advice, please consult a qualified professional.</p>`
+        },
+        cookies: {
+          title: 'Cookie Policy',
+          body: `<p>This site uses essential cookies only—those required for basic functionality. We do not use advertising, tracking, or third-party cookies.</p>
+                 <p>If you subscribe to our newsletter, your email address is stored securely and used solely for the purpose of delivering our weekly dispatch.</p>`
+        }
+      };
+
+      document.querySelectorAll('.modal-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const type = this.getAttribute('data-modal');
+          const content = modalContent[type];
+          if (content) {
+            modalBody.innerHTML = `<h2>${content.title}</h2>${content.body}`;
+            modalOverlay.classList.add('open');
+            document.body.style.overflow = 'hidden';
+          }
+        });
+      });
+
+      closeModal.addEventListener('click', () => {
+        modalOverlay.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+
+      modalOverlay.addEventListener('click', (e) => {
+        if (e.target === modalOverlay) {
+          modalOverlay.classList.remove('open');
+          document.body.style.overflow = '';
+        }
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modalOverlay.classList.contains('open')) {
+          modalOverlay.classList.remove('open');
+          document.body.style.overflow = '';
+        }
+      });
+
+      // ===== NEWSLETTER FORM =====
+      const newsletterForm = document.getElementById('newsletterForm');
+      if (newsletterForm) {
+        newsletterForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          const input = this.querySelector('input');
+          const button = this.querySelector('button');
+          if (input.value && input.value.includes('@')) {
+            button.textContent = 'Subscribed';
+            button.style.background = '#a05a2c';
+            input.disabled = true;
+          }
+        });
+      }
+
+    })();
+  </script>
+</body>
+</html>
